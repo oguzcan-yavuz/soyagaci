@@ -43,9 +43,9 @@ $(function(){
 var chart_config = {
 	chart: {
 		container: "#OrganiseChart-big-commpany",
-		levelSeparation: 50,
+		levelSeparation: 25,
 
-		rootOrientation: "SOUTH",
+		rootOrientation: "WEST",
 		
 		nodeAlign: "BOTTOM",
 
