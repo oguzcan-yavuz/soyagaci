@@ -40,22 +40,29 @@
   <input type="hidden" value="AB"/>
   
  <div class="container-fluid">
-	<div class="row">	  
-	
-	<div class="col-6 offset-3" id="upload" style="display:none">	
-		<form action="#" method="POST">
-		  <input type="file" multiple>
-		  <p>Surukle & Birak.</p>
-		  <button type="submit">Yukle</button>
-		</form>
-	</div>
-
-	<!-- Soy Agaci Tablosu -->
-	<div class="chart" id="OrganiseChart-big-commpany"></div>	
-	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron" >
+			  <h1 class="display-4">Soy Ağacı uygulamamıza hoş geldiniz.</h1>
+			  <p class="lead">Bu uygulama ile soy ağacınızı grafiksel olarak görüntüleyebilir ve bilgilerinizi daha kolay erişebilirisiniz.</p>
+			  <hr class="my-4">
+			  <div class="col-6 offset-3" id="upload" >	
+				<form action="#" method="POST">
+				  <input type="file" multiple>
+				  <p>Soy ağacınızın bulunduğu pdf dosyasını seçiniz.</p>
+				  <button type="submit">Soy Ağacımı Göster</button>
+				</form>
+				</div>
+			  <p class="lead">
+				<a class="btn btn-primary btn-lg" href="#" role="button">Nasıl Çalışır ?</a>
+			  </p>
+			</div>
+			
+			<!-- Soy Agaci Tablosu -->
+		<div class="chart" id="OrganiseChart-big-commpany" style="display:none"></div>
+		</div>
 	</div>
  </div>
-
 
  <div class="modal fade" id="detay" tabindex="-1" role="dialog" aria-labelledby="yakinlik" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -72,16 +79,16 @@
 				  <div class="card-body">
 				 
 					<h5 class="card-title" id="isim"> </h5>
-					<p class="card-text" id="dogumYeri">Doğum Yeri / Tarihi : BAKIRKÖY 19/08/1996</p>
+					<p class="card-text" id="dogumYeri"></p>
 				  </div>
 				  <ul class="list-group list-group-flush">
-					<li class="list-group-item" id="anneAdi">Anne Adı: Esma</li>
-					<li class="list-group-item" id="babaAdi">Baba Adı: Ramazan</li>
-					<li class="list-group-item" id="nereli">İl / İlçe / Mahalle : Denizli/ Sarayköy/ AŞAĞI MAHALLESİ</li>
-					<li class="list-group-item" id="mHal">Medeni Hal: Bekâr </li>
-					<li class="list-group-item" id="durum">Durumu: Sağ -</li>
-					<li class="list-group-item" id="cinsiyet">Cinsiyet: E </li>
-					<li class="list-group-item" id="cilt">Cilt - Hane - Birey No: 1-19-60 </li>
+					<li class="list-group-item" id="anneAdi"></li>
+					<li class="list-group-item" id="babaAdi"></li>
+					<li class="list-group-item" id="nereli"></li>
+					<li class="list-group-item" id="mHal"></li>
+					<li class="list-group-item" id="durum"></li>
+					<li class="list-group-item" id="cinsiyet"></li>
+					<li class="list-group-item" id="cilt"></li>
 				  </ul>
 				</div>
       </div>
@@ -91,28 +98,7 @@
     </div>
   </div>
 </div>
- 
-	<!-- Kisi Detay -->
-	<div class="modal fade detay" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-sm">
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="src/img/man.png" alt="Card image cap">
-				  <div class="card-body">
-					<h5 class="card-title">Oguzcan Yavuz</h5>
-					<p class="card-text">Doğum Yeri / Tarihi : BAKIRKÖY 19/08/1996</p>
-				  </div>
-				  <ul class="list-group list-group-flush">
-					<li class="list-group-item">Anne Adı: Esma</li>
-					<li class="list-group-item">Baba Adı: Ramazan</li>
-					<li class="list-group-item">İl - İlçe - Mahalle :</li>
-				  </ul>
-				  <div class="card-body">
-					<a href="#" class="card-link">Card link</a>
-					<a href="#" class="card-link">Another link</a>
-				  </div>
-				</div>
-		</div>
-	</div> 
+
  
   </body>
 

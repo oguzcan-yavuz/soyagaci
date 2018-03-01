@@ -10,7 +10,7 @@ var gelen = {"details": {"AAAA": ["Annesinin Annesinin\nAnnesinin Annesi", "ASLÄ
 $(function(){
     $('p').click(function(){
         var kisi = $(this).text();
-		var yakinlik = kisi.split(":")[0];
+		var yakinlik = kisi.split(":")[1];
 		console.log(gelen["details"][yakinlik]);
 		var adiSoyadi = gelen["details"][yakinlik][1] + " " +gelen["details"][yakinlik][2];
 		var yakinlikDerece = gelen["details"][yakinlik][0];

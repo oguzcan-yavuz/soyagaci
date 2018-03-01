@@ -1,20 +1,17 @@
 
 #upload form{
-  position: absolute;
-  top: 50%;
-  left: 50%;
+
   margin-top: 10%;
-  margin-left: -250px;
-  width: 500px;
+  width: 100%;
   height: 200px;
-  border: 4px dashed #fff;
+  border: 4px dashed #DC3545;
 }
 #upload form p{
   width: 100%;
   height: 100%;
   text-align: center;
   line-height: 170px;
-  color: #ffffff;
+  color: #DC3545;
   font-family: Arial;
 }
 #upload form input{
@@ -27,20 +24,20 @@
   opacity: 0;
 }
 #upload form button{
-  color: #fff;
-  background: #16a085;
+  color: #F8F9FA;
+  background: #DC3545;
   border: none;
   width: 100%;
   height: 35px;
-  border-radius: 4px;
-  border-bottom: 4px solid #117A60;
+  border-radius: 3px;
+  border-bottom: 3px solid #e04e5c;
   transition: all .2s ease;
   outline: none;
   margin-top: 20px;
 }
 #upload form button:hover{
-  background: #149174;
-	color: #0C5645;
+  background: #e04e5c;
+  color: #F8F9FA;
 }
 #upload form button:active{
   border:0;
