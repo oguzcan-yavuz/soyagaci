@@ -1866,7 +1866,7 @@
                     // ***** text'i ":" dan ayirip sol kisma span ekleyerek gorunmesini engeller //
                     var kinship = this.text[key].split(": ");
                     var child = document.createElement('span');
-                    child.innerHTML = kinship[0];
+                    child.innerHTML = ":" + kinship[0];
                     child.setAttribute("style", "display:none");
                     this.text[key] = kinship[1];
                     // *********** -yvz- //
