@@ -52,7 +52,7 @@ var chart_config = {
 		connectors: {
 			type: "step",
 			style: {
-				"stroke-width": 1
+				"stroke-width": 2
 			}
 		},
 		node: {

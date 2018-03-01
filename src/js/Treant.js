@@ -2017,13 +2017,13 @@
         animateOnInit: false,
         animateOnInitDelay: 500,
 
-        padding: 15, // the difference is seen only when the scrollbar is shown
+        padding: 10, // the difference is seen only when the scrollbar is shown
         scrollbar: 'native', // "native" || "fancy" || "None" (PS: "fancy" requires jquery and perfect-scrollbar)
 
         connectors: {
             type: 'curve', // 'curve' || 'step' || 'straight' || 'bCurve'
             style: {
-                stroke: 'red'
+                stroke: '#FF0040'
             },
             stackIndent: 15
         },
