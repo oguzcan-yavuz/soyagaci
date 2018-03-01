@@ -3,15 +3,15 @@
 /* optional Container STYLES */
 .chart { height: 100%; width: 100%; margin:15px auto; border: 3px solid #DDD; border-radius: 3px;}
 
-.node { font-size: 11px; }
+.node { font-size: 10px; }
 
 .node.big-commpany { 
 	cursor: pointer;
 	padding: 0 2px;
 	min-width: 80px;
 	text-align: center;
-	height: 30px;
-	border: 2px solid #E8E8E3; 
+	height: 40px;
+	border: 1px solid #E8E8E3; 
 	border-radius: 2px;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.5);
 	background: #fff; 
@@ -23,7 +23,7 @@
 }
 
 .node.big-commpany .node-name {
-	line-height: 30px;
+	line-height: 20px;
 	color: #9B9B9B;
 }
 
