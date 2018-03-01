@@ -1863,6 +1863,13 @@
 					textElement.setAttribute("data-toggle", "modal");
 					textElement.setAttribute("data-target", "#detay");
 					/*Bitis*/
+                    // ***** text'i ":" dan ayirip sol kisma span ekleyerek gorunmesini engeller //
+                    var kinship = this.text[key].split(": ");
+                    var child = document.createElement('span');
+                    child.innerHTML = kinship[0];
+                    child.setAttribute("style", "display:none");
+                    this.text[key] = kinship[1];
+                    // *********** -yvz- //
 				// make an <a> element if required
                 if (this.text[key].href) {
                     textElement.href = this.text[key].href;
@@ -1878,7 +1885,9 @@
                         this.text[key] instanceof Object ? "'val' param missing!" : this.text[key]
                     )
                 );
-
+				/*******/
+				textElement.appendChild(child); // adding span here -yvz-
+                /******/
                 node.appendChild(textElement);
             }
         }
