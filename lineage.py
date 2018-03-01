@@ -48,14 +48,14 @@ json_pointer = json_result["nodeStructure"]
 def refine_kinship_dict(kinship_dict, current_relative, json_dict_pointer):
     if current_relative == "K":
         json_dict_pointer["text"] = {
-            "name": current_relative + ": " + kinship_dict[current_relative][1] + " " + kinship_dict[current_relative][2]
+            "name": '<input type="hidden" value="' + current_relative + '"' + '/>' + kinship_dict[current_relative][1] + " " + kinship_dict[current_relative][2]
         }
         json_dict_pointer["children"] = []
         refine_kinship_dict(kinship_dict, "", json_dict_pointer["children"])
     if current_relative + "A" in kinship_dict:
         json_dict_pointer.append({
             "text": {
-                "name": current_relative + "A: " + kinship_dict[current_relative + "A"][1] + " " + kinship_dict[current_relative + "A"][2]
+                "name": '<input type="hidden" value="' + current_relative + 'A"' + '/>' + kinship_dict[current_relative + "A"][1] + " " + kinship_dict[current_relative + "A"][2]
             },
             "children": []
         })
@@ -63,7 +63,7 @@ def refine_kinship_dict(kinship_dict, current_relative, json_dict_pointer):
     if current_relative + "B" in kinship_dict:
         json_dict_pointer.append({
             "text": {
-                "name": current_relative + "B: " + kinship_dict[current_relative + "B"][1] + " " + kinship_dict[current_relative + "B"][2]
+                "name": '<input type="hidden" value="' + current_relative + 'B"' + '/>' + kinship_dict[current_relative + "B"][1] + " " + kinship_dict[current_relative + "B"][2]
             },
             "children": []
         })
@@ -72,7 +72,7 @@ def refine_kinship_dict(kinship_dict, current_relative, json_dict_pointer):
 
 def get_lineage():
     split_pattern = re.compile(r'\d+///(E|K)///|\d+ (E|K)///')
-    pdf = textract.process('yigit_soy.pdf', method='pdftotext')
+    pdf = textract.process('SOY.pdf', method='pdftotext')
     trimmed_str = trim_string(pdf.decode('utf-8'))
     results = trimmed_str.split("\n\n")
     refined_results = refine_list(results)
