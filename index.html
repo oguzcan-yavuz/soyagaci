@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title> Connectors style example </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="src/css/Treant.css">
+	<link rel="stylesheet" href="src/css/connectors.css">
+	<link rel="stylesheet" href="src/css/perfect-scrollbar.css">
+	<link rel="stylesheet" href="src/css/bootstrap.min.css">
+	<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body style='background-color:#666'>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Soy Ağacım</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Anasayfa <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nasıl Çalışır</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">İletişim</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+ <div class="container">
+	<div class="row">	  
+	
+	<div class="col-6 offset-3" id="upload" style="display:none">	
+		<form action="#" method="POST">
+		  <input type="file" multiple>
+		  <p>Surukle & Birak.</p>
+		  <button type="submit">Yukle</button>
+		</form>
+	</div>
+
+	<!-- Soy Agaci Tablosu -->
+	<div class="chart" id="OrganiseChart-big-commpany"></div>	
+	
+	</div>
+ </div>
+
+
+ <div class="modal fade" id="detay" tabindex="-1" role="dialog" aria-labelledby="yakinlik" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="yakinlik"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card" style="width: 28rem;">
+		
+				  <div class="card-body">
+				 
+					<h5 class="card-title" id="isim"> </h5>
+					<p class="card-text" id="dogumYeri">Doğum Yeri / Tarihi : BAKIRKÖY 19/08/1996</p>
+				  </div>
+				  <ul class="list-group list-group-flush">
+					<li class="list-group-item" id="anneAdi">Anne Adı: Esma</li>
+					<li class="list-group-item" id="babaAdi">Baba Adı: Ramazan</li>
+					<li class="list-group-item" id="nereli">İl / İlçe / Mahalle : Denizli/ Sarayköy/ AŞAĞI MAHALLESİ</li>
+					<li class="list-group-item" id="mHal">Medeni Hal: Bekâr </li>
+					<li class="list-group-item" id="durum">Durumu: Sağ -</li>
+					<li class="list-group-item" id="cinsiyet">Cinsiyet: E </li>
+					<li class="list-group-item" id="cilt">Cilt - Hane - Birey No: 1-19-60 </li>
+				  </ul>
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+	<!-- Kisi Detay -->
+	<div class="modal fade detay" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+				<div class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="src/img/man.png" alt="Card image cap">
+				  <div class="card-body">
+					<h5 class="card-title">Oguzcan Yavuz</h5>
+					<p class="card-text">Doğum Yeri / Tarihi : BAKIRKÖY 19/08/1996</p>
+				  </div>
+				  <ul class="list-group list-group-flush">
+					<li class="list-group-item">Anne Adı: Esma</li>
+					<li class="list-group-item">Baba Adı: Ramazan</li>
+					<li class="list-group-item">İl - İlçe - Mahalle :</li>
+				  </ul>
+				  <div class="card-body">
+					<a href="#" class="card-link">Card link</a>
+					<a href="#" class="card-link">Another link</a>
+				  </div>
+				</div>
+		</div>
+	</div> 
+ 
+  </body>
+
+  <script src="src/js/app.js"></script>
+  <script src="src/js/raphael.js"></script>
+  <script src="src/js/Treant.js"></script>
+  <script src="src/js/connectors.js"></script>
+  <script src="src/js/bootstrap.min.js"></script>
+
+    <script>
+      new Treant( chart_config);
+    </script>
+
+  </html>
+
