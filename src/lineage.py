@@ -36,7 +36,8 @@ def create_kinship_dict(people_list):
     for person in people_list:
         person_details = person.split('///')
         kinship = ''.join([c for c in person_details[0] if c.isupper()])
-        person_details.append(lineage_stats.get_age(person_details[5], person_details[9]))
+        if len(person_details) > 9:
+            person_details.append(lineage_stats.get_age(person_details[5], person_details[9]))
         result_dict[kinship] = person_details
     return result_dict
 
@@ -74,7 +75,7 @@ def refine_kinship_dict(kinship_dict, current_relative, json_dict_pointer):
 
 def get_lineage():
     split_pattern = re.compile(r'\d+///(E|K)///|\d+ (E|K)///')
-    pdf = textract.process('../soy_test.pdf', method='pdftotext')
+    pdf = textract.process('../soyagaci.pdf', method='pdftotext')
     trimmed_str = trim_string(pdf.decode('utf-8'))
     results = trimmed_str.split("\n\n")
     refined_results = refine_list(results)

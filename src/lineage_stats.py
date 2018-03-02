@@ -10,7 +10,10 @@ def convert_dates(given_date):
 
 def get_age(birth_date, death_date):
     # calculates the age of the given person
-    birth_date = convert_dates(birth_date.split("\n")[1])
+    try:
+        birth_date = convert_dates(birth_date.split("\n")[1])
+    except IndexError:
+        return 0
     # check if the death date is known or the person is still alive
     check_character = death_date[-3:-2]
     if check_character == "ğ":
