@@ -1,4 +1,3 @@
-/* Pdf Yukleme */
 $(document).ready(function () {
     // anne ve baba taraflarinin yaslarini dizilere koy
     var anneTarafi = [];
@@ -16,9 +15,19 @@ $(document).ready(function () {
             babaTarafi.push(age);
         }
     }
-    console.log(anneTarafi);
-    console.log(babaTarafi);
+    function sum(a, b) { return a + b }
+    console.log("anne tarafi: ", anneTarafi);
+    var anneTarafiEnYasli = Math.max.apply(Math, anneTarafi);
+    console.log("anne tarafi en yasli", anneTarafiEnYasli);
+    var anneTarafiOrt = (anneTarafi.reduce(sum) / anneTarafi.length).toFixed(1);
+    console.log("anne tarafi ortalama yas: ", anneTarafiOrt);
+    console.log("baba tarafi: ", babaTarafi);
+    var babaTarafiEnYasli = Math.max.apply(Math, babaTarafi);
+    console.log("baba tarafi en yasli", babaTarafiEnYasli);
+    var babaTarafiOrt = (babaTarafi.reduce(sum) / babaTarafi.length).toFixed(1);
+    console.log("baba tarafi ortalama yas: ", babaTarafiOrt);
 
+    /* Pdf Yukleme */
     $('#upload form input').change(function () {
         $('#upload form p').text("Lütfen aşağıdaki 'Soy Ağacımı Göster' butonuna tıklayınız.");
     });
