@@ -7,8 +7,9 @@ function mode(array)
     for(var i = 0; i < array.length; i++)
     {
         var el = array[i];
-        if(modeMap[el] === null)
+        if(!modeMap[el]) {
             modeMap[el] = 1;
+        }
         else
             modeMap[el]++;
         if(modeMap[el] > maxCount)
@@ -31,7 +32,7 @@ $(document).ready(function () {
         var arr = gelen["details"][keysArr[i]];
         var sehir = arr[6].split("/")[0];
         var age = arr[arr.length - 1];
-        if(age === 0 || age > 113) {        // buraya yas kontrolu koysak?
+        if(age === 0 || age > 113 || typeof age !== "number") {        // buraya yas kontrolu koysak?
             continue;
         }
         if(keysArr[i].startsWith("A")) {
@@ -57,6 +58,8 @@ $(document).ready(function () {
     console.log("baba tarafi en genc: ", bTarafiYasEnGenc);
     var bTarafiYasOrt = (bTarafiYas.reduce(sum) / bTarafiYas.length).toFixed(1);
     console.log("baba tarafi ortalama yas: ", bTarafiYasOrt);
+    console.log(aTarafiSehir);
+    console.log(bTarafiSehir);
     console.log("anne tarafi en cok yasanan sehir: ", mode(aTarafiSehir));
     console.log("baba tarafi en cok yasanan sehir: ", mode(bTarafiSehir));
 
@@ -65,5 +68,4 @@ $(document).ready(function () {
         $('#upload form p').text("Lütfen aşağıdaki 'Soy Ağacımı Göster' butonuna tıklayınız.");
     });
 });
-
 
