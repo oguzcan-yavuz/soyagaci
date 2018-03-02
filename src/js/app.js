@@ -18,12 +18,16 @@ $(document).ready(function () {
     function sum(a, b) { return a + b }
     console.log("anne tarafi: ", anneTarafi);
     var anneTarafiEnYasli = Math.max.apply(Math, anneTarafi);
-    console.log("anne tarafi en yasli", anneTarafiEnYasli);
+    var anneTarafiEnGenc = Math.min.apply(Math, anneTarafi);
+    console.log("anne tarafi en yasli: ", anneTarafiEnYasli);
+    console.log("anne tarafi en genc: ", anneTarafiEnGenc);
     var anneTarafiOrt = (anneTarafi.reduce(sum) / anneTarafi.length).toFixed(1);
     console.log("anne tarafi ortalama yas: ", anneTarafiOrt);
     console.log("baba tarafi: ", babaTarafi);
     var babaTarafiEnYasli = Math.max.apply(Math, babaTarafi);
+    var babaTarafiEnGenc = Math.min.apply(Math, babaTarafi);
     console.log("baba tarafi en yasli", babaTarafiEnYasli);
+    console.log("baba tarafi en genc: ", babaTarafiEnGenc);
     var babaTarafiOrt = (babaTarafi.reduce(sum) / babaTarafi.length).toFixed(1);
     console.log("baba tarafi ortalama yas: ", babaTarafiOrt);
 
